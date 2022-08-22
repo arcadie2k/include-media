@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #225378;
+}
+@media (max-width: 1024px) {
+  .container {
+    background: #1695a3;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    background: #acf0f2;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    background: #f3ffe2;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
