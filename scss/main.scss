@@ -5,22 +5,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial;
 }
 
 .container {
     width: 100%;
     height: 100vh;
     background: $color1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &::before {
+        content: "Desktop";
+        font-weight: 600;
+        white-space: nowrap;
+    }
 
     @include media("<=desktop") {
         background: $color2;
+
+        &::before {
+            content: "Custom Breakpoint";
+        }
+    }
+
+    @include media("<=custom-breakpoint") {
+        background: $color2;
+
+        &::before {
+            content: "Tablet";
+        }
     }
 
     @include media("<=tablet") {
         background: $color3;
+
+        &::before {
+            content: "Big Phone";
+        }
     }
 
     @include media("<=phone") {
         background: $color4;
+
+        &::before {
+            content: "Small Phone";
+        }
     }
 }
